@@ -19,9 +19,14 @@ module.exports = {
     module: {
         loaders: [
             {
+                test: /\.less$/,
+                exclude: /node_modules/,
+                loader: 'style-loader!css-loader!autoprefixer-loader!less-loader'
+            },
+            {
                 test: /\.css$/,
                 exclude: /node_modules/,
-                loader: 'style-loader!css-loader'
+                loader: 'style-loader!css-loader!autoprefixer-loader'
             },
             {
                 test: /\.es6$/,

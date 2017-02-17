@@ -1,6 +1,6 @@
 require('./login');
 require('../css/bootstrap.css');
-require('../css/app.css');
+require('../css/app.less');
 
 console.log('Welcome to Big Hair Concerts!!');
 
