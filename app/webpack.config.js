@@ -9,8 +9,8 @@ module.exports = {
         './utils'
     ],
     output: {
-        path: path.resolve('build/js'),
-        publicPath: '/public/assets/js',
+        path: path.resolve('build/'),
+        publicPath: '/public/assets/',
         filename: "bundle.js"
     },
     devServer: {
@@ -19,23 +19,28 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.less$/,
-                exclude: /node_modules/,
-                loader: 'style-loader!css-loader!autoprefixer-loader!less-loader'
-            },
-            {
                 test: /\.css$/,
                 exclude: /node_modules/,
-                loader: 'style-loader!css-loader!autoprefixer-loader'
+                loader: 'style-loader!css-loader'
             },
             {
-                test: /\.es6$/,
+                test: /\.html$/,
+                exclude: /node_modules/,
+                loader: 'raw-loader'
+            },
+            {
+                test: /\.(png|jpg)$/,
+                exclude: /node_modules/,
+                loader: 'url-loader?limit=2048'
+            },
+            {
+                test: /\.(js|es6|jsx)$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader'
             }
         ]
     },
     resolve: {
-        extensions: [ '.js', '.es6' ]
+        extensions: [ '.js', '.es6', '.jsx' ]
     }
 };

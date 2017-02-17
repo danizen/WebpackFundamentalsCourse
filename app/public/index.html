@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>My App</title>
 </head>
 <body>
@@ -13,14 +15,31 @@
 
 			<div id="navbar">
 				<ul class="nav nav-bar">
-					<li><a href="#">Foo</a></li>
-					<li><a href="#">Bar</a></li>
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
 				</ul>
 			</div>
 		</div>		
 	</nav>
 
-	<h1>My Big App</h1>
+	<div class="container">
+		<h1><span id="img_container"></span>This image required in (app.js)</h1>
+		<h3><span id="bg_header_img"><img class="bg_header_img"/></span>This image via inline CSS bg image (app.css)</h3>
+
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Concert</th>
+					<th>Date</th>
+					<th>Time</th>
+					<th>Venue</th>
+					<th>Band</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
 
   <script src="/public/assets/bundle.js"></script>
 </body>
